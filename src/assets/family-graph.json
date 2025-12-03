@@ -1,0 +1,320 @@
+{
+    "nodes": [
+        {
+            "id": "family1",
+            "type": "familyRoot",
+            "name": "The Sharma Family"
+        },
+        {
+            "id": "p1",
+            "type": "person",
+            "name": "Shyam Sharma",
+            "gender": "M",
+            "birthYear": 1940,
+            "deathYear": 2010,
+            "city": "Delhi",
+            "generation": 1
+        },
+        {
+            "id": "p2",
+            "type": "person",
+            "name": "Kamla Sharma",
+            "gender": "F",
+            "birthYear": 1945,
+            "deathYear": null,
+            "city": "Delhi",
+            "generation": 1
+        },
+        {
+            "id": "p3",
+            "type": "person",
+            "name": "Rajesh Sharma",
+            "gender": "M",
+            "birthYear": 1968,
+            "deathYear": null,
+            "city": "Mumbai",
+            "generation": 2,
+            "parentIds": [
+                "p1",
+                "p2"
+            ]
+        },
+        {
+            "id": "p4",
+            "type": "person",
+            "name": "Sunita Sharma",
+            "gender": "F",
+            "birthYear": 1970,
+            "deathYear": null,
+            "city": "Mumbai",
+            "generation": 2
+        },
+        {
+            "id": "p5",
+            "type": "person",
+            "name": "Anita Verma",
+            "gender": "F",
+            "birthYear": 1972,
+            "deathYear": null,
+            "city": "Delhi",
+            "generation": 2,
+            "parentIds": [
+                "p1",
+                "p2"
+            ]
+        },
+        {
+            "id": "p6",
+            "type": "person",
+            "name": "Amit Sharma",
+            "gender": "M",
+            "birthYear": 1995,
+            "deathYear": null,
+            "city": "Bengaluru",
+            "generation": 3,
+            "parentIds": [
+                "p3",
+                "p4"
+            ]
+        },
+        {
+            "id": "p7",
+            "type": "person",
+            "name": "Neha Sharma",
+            "gender": "F",
+            "birthYear": 1998,
+            "deathYear": null,
+            "city": "Pune",
+            "generation": 3,
+            "parentIds": [
+                "p3",
+                "p4"
+            ]
+        },
+        {
+            "id": "p8",
+            "type": "person",
+            "name": "Karan Verma",
+            "gender": "M",
+            "birthYear": 1999,
+            "deathYear": null,
+            "city": "Delhi",
+            "generation": 3,
+            "parentIds": [
+                "p5"
+            ]
+        },
+        {
+            "id": "p9",
+            "type": "person",
+            "name": "Isha Sharma",
+            "gender": "F",
+            "birthYear": 2022,
+            "deathYear": null,
+            "city": "Bengaluru",
+            "generation": 4,
+            "parentIds": [
+                "p6"
+            ]
+        },
+        {
+            "id": "p10",
+            "type": "person",
+            "name": "Arjun Sharma",
+            "gender": "M",
+            "birthYear": 2024,
+            "deathYear": null,
+            "city": "Bengaluru",
+            "generation": 4,
+            "parentIds": [
+                "p6"
+            ]
+        },
+        {
+            "id": "p11",
+            "type": "person",
+            "name": "Rohan Mehta",
+            "gender": "M",
+            "birthYear": 1994,
+            "deathYear": null,
+            "city": "Pune",
+            "generation": 3
+        },
+        {
+            "id": "p12",
+            "type": "person",
+            "name": "Tara Mehta",
+            "gender": "F",
+            "birthYear": 2023,
+            "deathYear": null,
+            "city": "Pune",
+            "generation": 4,
+            "parentIds": [
+                "p7",
+                "p11"
+            ]
+        },
+        {
+            "id": "p13",
+            "type": "person",
+            "name": "Oldest Ancestor",
+            "gender": "M",
+            "birthYear": 1915,
+            "deathYear": 1980,
+            "city": "Village",
+            "generation": 0
+        },
+        {
+            "id": "p14",
+            "type": "person",
+            "name": "Oldest Ancestor Spouse",
+            "gender": "F",
+            "birthYear": 1918,
+            "deathYear": 1985,
+            "city": "Village",
+            "generation": 0
+        },
+        {
+            "id": "p15",
+            "type": "person",
+            "name": "Distant Cousin 1",
+            "gender": "M",
+            "birthYear": 1985,
+            "deathYear": null,
+            "city": "London",
+            "generation": 2
+        },
+        {
+            "id": "p16",
+            "type": "person",
+            "name": "Distant Cousin 2",
+            "gender": "F",
+            "birthYear": 1987,
+            "deathYear": null,
+            "city": "New York",
+            "generation": 2
+        }
+    ],
+    "links": [
+        {
+            "id": "l_family_root_p1",
+            "source": "family1",
+            "target": "p1",
+            "relation": "parent"
+        },
+        {
+            "id": "l_family_root_p2",
+            "source": "family1",
+            "target": "p2",
+            "relation": "parent"
+        },
+        {
+            "id": "l_p13_p1",
+            "source": "p13",
+            "target": "p1",
+            "relation": "parent"
+        },
+        {
+            "id": "l_p14_p1",
+            "source": "p14",
+            "target": "p1",
+            "relation": "parent"
+        },
+        {
+            "id": "l_p1_p3",
+            "source": "p1",
+            "target": "p3",
+            "relation": "parent"
+        },
+        {
+            "id": "l_p2_p3",
+            "source": "p2",
+            "target": "p3",
+            "relation": "parent"
+        },
+        {
+            "id": "l_p1_p5",
+            "source": "p1",
+            "target": "p5",
+            "relation": "parent"
+        },
+        {
+            "id": "l_p2_p5",
+            "source": "p2",
+            "target": "p5",
+            "relation": "parent"
+        },
+        {
+            "id": "l_p3_p6",
+            "source": "p3",
+            "target": "p6",
+            "relation": "parent"
+        },
+        {
+            "id": "l_p4_p6",
+            "source": "p4",
+            "target": "p6",
+            "relation": "parent"
+        },
+        {
+            "id": "l_p3_p7",
+            "source": "p3",
+            "target": "p7",
+            "relation": "parent"
+        },
+        {
+            "id": "l_p4_p7",
+            "source": "p4",
+            "target": "p7",
+            "relation": "parent"
+        },
+        {
+            "id": "l_p6_p9",
+            "source": "p6",
+            "target": "p9",
+            "relation": "parent"
+        },
+        {
+            "id": "l_p6_p10",
+            "source": "p6",
+            "target": "p10",
+            "relation": "parent"
+        },
+        {
+            "id": "l_p7_p12",
+            "source": "p7",
+            "target": "p12",
+            "relation": "parent"
+        },
+        {
+            "id": "l_p11_p12",
+            "source": "p11",
+            "target": "p12",
+            "relation": "parent"
+        },
+        {
+            "id": "l_spouse_p1_p2",
+            "source": "p1",
+            "target": "p2",
+            "relation": "spouse"
+        },
+        {
+            "id": "l_spouse_p3_p4",
+            "source": "p3",
+            "target": "p4",
+            "relation": "spouse"
+        },
+        {
+            "id": "l_spouse_p7_p11",
+            "source": "p7",
+            "target": "p11",
+            "relation": "spouse"
+        },
+        {
+            "id": "l_spouse_p13_p14",
+            "source": "p13",
+            "target": "p14",
+            "relation": "spouse"
+        }
+    ]
+}
