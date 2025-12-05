@@ -1,1 +1,50 @@
-<p>family-filters works!</p>
+<div class="card shadow-sm h-100">
+    <div class="card-header bg-primary text-white">
+        <h5 class="mb-0">Filters</h5>
+    </div>
+    <div class="card-body">
+        <!-- Gender -->
+        <h6 class="fw-bold">Gender</h6>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="genM" [checked]="filters().genders['M']"
+                (change)="toggleGender('M', $any($event.target).checked)">
+            <label class="form-check-label" for="genM">Male</label>
+        </div>
+        <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" id="genF" [checked]="filters().genders['F']"
+                (change)="toggleGender('F', $any($event.target).checked)">
+            <label class="form-check-label" for="genF">Female</label>
+        </div>
+
+        <!-- Alive Status -->
+        <h6 class="fw-bold">Status</h6>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="status" id="stAll"
+                [checked]="filters().aliveStatus === 'all'" (change)="setStatus('all')">
+            <label class="form-check-label" for="stAll">All</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="status" id="stAlive"
+                [checked]="filters().aliveStatus === 'alive'" (change)="setStatus('alive')">
+            <label class="form-check-label" for="stAlive">Alive</label>
+        </div>
+        <div class="form-check mb-3">
+            <input class="form-check-input" type="radio" name="status" id="stDec"
+                [checked]="filters().aliveStatus === 'deceased'" (change)="setStatus('deceased')">
+            <label class="form-check-label" for="stDec">Deceased</label>
+        </div>
+
+        <!-- Cities -->
+        <h6 class="fw-bold">Cities</h6>
+        <div *ngFor="let city of availableCities" class="form-check">
+            <input class="form-check-input" type="checkbox" [id]="'city'+city" [checked]="filters().cities[city]"
+                (change)="toggleCity(city, $any($event.target).checked)">
+            <label class="form-check-label" [for]="'city'+city">{{city}}</label>
+        </div>
+
+        <hr>
+        <div class="d-grid">
+            <button class="btn btn-outline-secondary btn-sm" (click)="clearSelection()">Clear Highlights</button>
+        </div>
+    </div>
+</div>

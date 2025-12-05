@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Fix for Deprecation Warning: Use @use instead of @import */
+@use 'bootstrap/scss/bootstrap';
+
+/* Add any other global overrides below */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+    /* Prevent horizontal scroll from D3 force layout jitter */
+}

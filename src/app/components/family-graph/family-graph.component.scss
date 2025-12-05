@@ -1,0 +1,35 @@
+.graph-container {
+    height: 700px;
+    overflow: hidden;
+    background-color: #fafafa;
+}
+
+:host ::ng-deep .node {
+    cursor: pointer;
+
+    /* Prevent text selection while dragging */
+    user-select: none;
+}
+
+/* Legend Styles */
+.legend-panel {
+    width: 200px;
+    opacity: 0.95;
+    pointer-events: none;
+    /* Let clicks pass through if needed, though usually legend sits on top */
+}
+
+.legend-box {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+}
+
+.legend-line {
+    width: 25px;
+    height: 0;
+}
+
+.tiny-text {
+    font-size: 0.75rem;
+}
